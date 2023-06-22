@@ -3,17 +3,14 @@ import Card from "react-bootstrap/Card";
 
 function Banner({ labels }) {
   return (
-    <Card
-      style={{ backgroundImage: "url({labels.img})" }}
-      className="text-center w-50 m-auto my-4"
-    >
+    <Card className="text-center w-50 m-auto my-4">
       <Card.Header>{labels.title}</Card.Header>
       <Card.Body>
         <Card.Title>
           {labels.desc} {labels.creator}
         </Card.Title>
         <Card.Text>
-          With supporting text below as a natural lead-in to additional content.
+          <img className="mainLogo" src={labels.mainLogo} />
         </Card.Text>
         <Button variant="primary">Go somewhere</Button>
       </Card.Body>
